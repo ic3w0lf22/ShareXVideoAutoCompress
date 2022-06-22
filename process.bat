@@ -1,3 +1,4 @@
+@REM this batch script is extremely pasted from stackoverflow
 @ECHO OFF
 :FIND
 IF "%1"=="-y" GOTO FOUND
@@ -25,4 +26,3 @@ if exist "%temp%\uncompressed.mp4" (
     HandBrakeCLI --preset "Discord Nitro Large 3-6 Minutes 1080p30" -i "%temp%\uncompressed.mp4" -o %1 -f "av_mp4" -r 60
     del "%temp%\uncompressed.mp4"
 )
-@REM start "" /b cmd /c compress.bat %1
